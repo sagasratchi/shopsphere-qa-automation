@@ -25,6 +25,11 @@ export class CheckoutPage {
       .first();
     this.couponInput = page.getByRole('textbox', { name: 'Coupon code' });
     this.applyCouponButton = page.getByRole('button', { name: 'Apply coupon' });
+    
+    this.total = page.locator('#total');
+    this.discount = page.locator('#discount');
+    this.shipping = page.locator('#shipping');
+
     this.paymentButton = page.getByRole('button', { name: 'Simulate Successful payment' });
   }
 
