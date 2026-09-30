@@ -18,6 +18,9 @@ test.describe('ShopSphere E2E Checkout Flow', () => {
 
         // 2. Login
         await checkoutPage.registerAndLogin(user.email, user.password);
+        await expect(
+            page.getByText('Logged in successfully')).toBeVisible();
+        
 
 
         // 3. Add product / update quantity
