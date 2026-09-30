@@ -1,0 +1,114 @@
+{
+  "users": [
+    {
+      "id": "82ba00f0-d77d-43b5-b834-95e08e9e71a5",
+      "email": "qa1@example.test",
+      "salt": "b7a7b2a9b063a8929684e1ec1c5e7855",
+      "hash": "08b8b534336d8a3cf6a3e0327441ba44126e176302f8d1409eb4ca69f1fe8218dc71b8493d8a6a5aa92b3a8302ccb3ebd8d499228b3a85f75243363ac7c2286c",
+      "used": [
+        "SAVE10"
+      ]
+    },
+    {
+      "id": "19c80011-c6dc-44c9-b4dd-0ce0cd9977e8",
+      "email": "qa.coupon.test01@example.test",
+      "salt": "2da2135513dfe1c3d84474257063f403",
+      "hash": "fbaa1eb58b8fc2982eb26f6b347b02b8d9b2cc8e8bbb3e5bf992634b69047009c73413d938b055b86378b72757e87024dc601a5d7a35377315eb927c70c3c1db",
+      "used": []
+    },
+    {
+      "id": "b98f6d44-fd16-42e9-87e1-2181ce7d3720",
+      "email": "qa-api-new01@example.test",
+      "salt": "d8ee51322f1d368123c69e6bd1917619",
+      "hash": "2bad5ce409e7ce84d2685b879c213e38f69ac6d666b1ba0e0a17915d10d68884c90113f5e9a2f2e95ae1969af82b804a200b7d2fa5a24166ce0c23d3f738dfe6",
+      "used": []
+    }
+  ],
+  "sessions": {
+    "dce8ec1a62e3117c6d5e687534b0ded39ed7e68f87f7cac4": {
+      "items": [
+        {
+          "id": "shirt",
+          "quantity": 1
+        }
+      ],
+      "coupon": null,
+      "userId": "19c80011-c6dc-44c9-b4dd-0ce0cd9977e8"
+    },
+    "d11337f5d55cb7db0c68e205080e6eefaf5a0c92875251e2": {
+      "items": [],
+      "coupon": null,
+      "userId": "82ba00f0-d77d-43b5-b834-95e08e9e71a5"
+    },
+    "7d7c7051b5aed24ea08669a15aad142a82366389e49bd2ac": {
+      "items": [
+        {
+          "id": "shirt",
+          "quantity": 2
+        }
+      ],
+      "coupon": "SAVE10",
+      "userId": "b98f6d44-fd16-42e9-87e1-2181ce7d3720"
+    }
+  },
+  "orders": [
+    {
+      "id": "a5929242-6c3a-4b65-8ee5-b261d94c5167",
+      "userId": "82ba00f0-d77d-43b5-b834-95e08e9e71a5",
+      "createdAt": "2026-09-26T07:09:54.656Z",
+      "items": [
+        {
+          "id": "bag",
+          "name": "Everyday bag",
+          "cents": 4999,
+          "quantity": 4
+        },
+        {
+          "id": "cent",
+          "name": "QA boundary adjustment (test item)",
+          "cents": 1,
+          "quantity": 1
+        }
+      ],
+      "coupon": "SAVE10",
+      "subtotal": 19997,
+      "discount": 2000,
+      "shipping": 0,
+      "total": 17997,
+      "currency": "EUR",
+      "user": {
+        "id": "82ba00f0-d77d-43b5-b834-95e08e9e71a5",
+        "email": "qa1@example.test",
+        "usedCoupons": [
+          "SAVE10"
+        ]
+      }
+    },
+    {
+      "id": "ac3abda8-414f-462f-aafc-f5d39d222925",
+      "userId": "82ba00f0-d77d-43b5-b834-95e08e9e71a5",
+      "createdAt": "2026-09-26T07:24:34.163Z",
+      "items": [
+        {
+          "id": "shirt",
+          "name": "Cotton shirt",
+          "cents": 2500,
+          "quantity": 2
+        }
+      ],
+      "coupon": null,
+      "subtotal": 5000,
+      "discount": 0,
+      "shipping": 500,
+      "total": 5500,
+      "currency": "EUR",
+      "user": {
+        "id": "82ba00f0-d77d-43b5-b834-95e08e9e71a5",
+        "email": "qa1@example.test",
+        "usedCoupons": [
+          "SAVE10"
+        ]
+      }
+    }
+  ]
+}

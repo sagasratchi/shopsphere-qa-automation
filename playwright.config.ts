@@ -33,6 +33,12 @@ export default defineConfig({
     trace: 'on-first-retry',
   },
 
+  webServer:{
+    command:'npm run start:shop',
+    url:'http://127.0.0.1:3000',
+    reuseExistingServer: !process.env.CI,
+    timeout: 120000,
+  },
   /* Configure projects for major browsers */
   projects: [
     {
