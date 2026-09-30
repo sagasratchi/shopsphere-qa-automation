@@ -5,17 +5,17 @@ test.describe.configure({ retries: 0 });
 
 const users = {
     chromium: {
-        email: 'qa-chromiumE@example.test',
+        email: 'qa-chromiumG@example.test',
         password: 'Practice123!'
     },
 
     firefox: {
-        email: 'qa-firefoxE@example.test',
+        email: 'qa-firefoxG@example.test',
         password: 'Practice123!'
     },
 
     webkit: {
-        email: 'qa-webkitE@example.test',
+        email: 'qa-webkitG@example.test',
         password: 'Practice123!'
     }
 };
