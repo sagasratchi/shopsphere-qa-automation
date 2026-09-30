@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:shop":"node app/server.js"
+    "start:shop": "cd app && node server.js"
   },
   "keywords": [],
   "author": "",
