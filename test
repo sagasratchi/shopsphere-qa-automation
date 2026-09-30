@@ -1,0 +1,52 @@
+const { chromium } = require('playwright');
+
+(async () => {
+  const browser = await chromium.launch({
+    headless: false
+  });
+  const context = await browser.newContext();
+  const page = await context.newPage();
+  await page.goto('file:///D:/playwright%20automation%20vs%20code%20extension/learnrecordingspecs.js');
+  const page1 = await context.newPage();
+  await page1.goto('https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsaucedemo%26oq%3Dsaucedemo%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOdIBCDQ0MThqMGo3qAIAsAIB%26sourceid%3Dchrome%26source%3Dchrome.ob%26ie%3DUTF-8%26sei%3DBt2qapOWBJrq7_UPkvTkIA&q=EhAgAQsHZGhyKyxwxmvlJJrrGIa6q9UGIjDHlqwu83gqVY70YSUbTDcT2Ip58zQjba-uWTtYlJKMQ2l1ClZqobUgXYI4nA0mlYAyAVJaAUM');
+  await page1.locator('iframe[name="a-3tzokt8ujedl"]').contentFrame().getByRole('checkbox', { name: 'I\'m not a robot' }).click();
+  await page1.locator('iframe[name="c-3tzokt8ujedl"]').contentFrame().getByRole('button', { name: 'Skip' }).click();
+  await page1.locator('iframe[name="c-3tzokt8ujedl"]').contentFrame().getByRole('button', { name: 'Skip' }).click();
+  await page1.locator('iframe[name="c-3tzokt8ujedl"]').contentFrame().getByRole('button', { name: 'Skip' }).click();
+  await page1.locator('div:nth-child(2) > div').first().click();
+  await page1.close();
+  const page2 = await context.newPage();
+  await page.getByText('const { chromium } = require').click();
+  await page2.goto('https://www.google.com/sorry/index?continue=https://www.google.com/search%3Fq%3Dsaucedemo%26oq%3Dsaucedemo%26gs_lcrp%3DEgZjaHJvbWUyBggAEEUYOdIBCDQ4NzdqMGo3qAIAsAIA%26sourceid%3Dchrome%26source%3Dchrome.ob%26ie%3DUTF-8%26sei%3DKN2qaqWBNaXq7_UP0dSd2AE&q=EhAgAQsHZGhyKyxwxmvlJJrrGKm6q9UGIjC3rDrz7_qcodpddWKbgpKjGZpIydABvPNOjyJQYOUZvUlY9uRUnpNxKHa5LljkVmIyAVJaAUM');
+  await page2.locator('iframe[name="a-7up9k4x77vk"]').contentFrame().getByRole('checkbox', { name: 'I\'m not a robot' }).click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="6"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="4"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().getByRole('button', { name: 'Verify' }).click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="4"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="2"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().getByRole('button', { name: 'Verify' }).click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="1"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="5"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="7"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="5"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().locator('[id="7"]').click();
+  await page2.locator('iframe[name="c-7up9k4x77vk"]').contentFrame().getByRole('button', { name: 'Verify' }).click();
+  await page2.goto('https://www.google.com/search?q=saucedemo&oq=saucedemo&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDQ4NzdqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8&sei=WN2qasPcIpyW9u8PvpSFsQo');
+  await page2.locator('div').nth(5).click();
+  await page2.getByRole('button', { name: 'Rifiuta tutto' }).click();
+  await page2.getByRole('link', { name: 'sauce ai homepage demo Sauce' }).click();
+  await page2.locator('#transcend-consent-manager').click();
+  await page2.locator('#transcend-consent-manager').click({
+    clickCount: 3
+  });
+  await page2.locator('#transcend-consent-manager').click();
+  await page2.locator('#transcend-consent-manager').click({
+    clickCount: 3
+  });
+  await page2.close();
+  await page.close();
+
+  // ---------------------
+  await context.close();
+  await browser.close();
+})();
