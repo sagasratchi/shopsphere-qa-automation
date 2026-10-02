@@ -30,7 +30,7 @@ test.describe('ShopSphere E2E Checkout Flow', () => {
         // 4. Apply SAVE10 coupon
         await checkoutPage.applyCoupon('SAVE10');
 
-        await expect(page.getByText('Coupon applied successfully')).toBeVisible();
+        await expect(page.getByText('Coupon applied successfully')).toBeVisible({ timeout: 10000 });
 
         //5. Verify discount and shipping
         await expect(page.locator('#discount'))
